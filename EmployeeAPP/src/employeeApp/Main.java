@@ -7,11 +7,10 @@ package employeeApp;
 - instantiate objects
  */
 
-public class Main
-{
+public class Main {
 
-    private static void workWithData ()
-    {
+    // static related to class
+    private static void workWithData() {
         Healthplan h1 = new Healthplan("My Health 1");
         Healthplan h2 = new Healthplan("My Health 2");
 
@@ -26,11 +25,10 @@ public class Main
         Employee emp4 = new Employee("John", "Jones", 80000, Boolean.FALSE, c2.id, h1.getId());
         Employee emp5 = new Employee("My", "Name", 45000, Boolean.TRUE, c2.id, h2.getId());
 
-
-    // start with practice here
-    // First practice round
+        // start with practice here
+        // First practice round
         System.out.println("*** Query Data");
-
+        System.out.println(emp1);
         System.out.println(c1);
         System.out.println();
         System.out.println("Original: " + c1.debt);
@@ -39,38 +37,34 @@ public class Main
         System.out.println();
         c1.debt = -c1.debt;
 
-    // second practice round
+        // second practice round
         System.out.println("Original divided 5 " + (c1.debt / 5));
         System.out.println("Original mod 2     " + (c1.debt % 2));
         System.out.println("Original divided 7 " + (c1.debt / 7));
         System.out.println("Original divided 7 " + (c1.debt / 7.0));
-        System.out.println("Original divided 7 " + ((double)c1.debt / 7));
+        System.out.println("Original divided 7 " + ((double) c1.debt / 7));
         System.out.println();
         String myStr = "100";
         System.out.println("Debt: " + myStr + c1.debt);
         System.out.println("Debt: " + Integer.parseInt(myStr) + c1.debt);
 
-
-    // third practice round
+        // third practice round
         System.out.println(emp1.toString());
         System.out.println();
 
         System.out.println(emp5.toString());
         System.out.println();
 
-
         System.out.println("*** Emp1 gets a raise");
         emp1.setSalary(emp1.getSalary() + (emp1.getSalary() * 0.03));
         System.out.println(emp1.toString());
         System.out.println();
 
-
         System.out.println("*** 401K amount for emp5");
         System.out.println(emp5.getSalary() * c1.match401K);
         System.out.println();
 
-
-    // fourth practice round
+        // fourth practice round
         // https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html
         System.out.println("*** Company Names");
         System.out.println("Combined");
@@ -82,16 +76,14 @@ public class Main
 
         String nameStr = emp1.getName();
         System.out.println(nameStr);
-        for (int i = 0; i < nameStr.length(); i++)
-        {
+        for (int i = 0; i < nameStr.length(); i++) {
             System.out.print(nameStr.charAt(i) + " ");
         }
         System.out.println();
     }
 
-
-    public static void main(String[] args)
-    {
+    // ide psmv in ide
+    public static void main(String[] args) {
         workWithData();
 
         // System.out.println(h1);
